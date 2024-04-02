@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --dark-color: #121212;
+    --principal-color: #FF5C00;
+    --white-color: #fff;
+    --pricipal-font: 'Inter', sans-serif
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+h2{
+    font-family: var(--pricipal-font);
+    color: var(--dark-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p{
+    font-family: var(--pricipal-font);
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.contain_apresentation{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./imgs/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contain_apresentation h2{
+    font-family: var(--pricipal-font);
+    color: var(--white-color);
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.contain_apresentation span{
+    font-family: var(--pricipal-font);
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .responsive_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+    gap: 50px;
+    padding: 25px 0;
+}
+
+main .responsive_container .responsive_describe{
+    width: 35%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+main .responsive_container .responsive_describe h2, main .responsive_container .responsive_describe p{
+    color: var(--white-color);
+}
+
+main .responsive_container .responsive_describe a{
+    background-color: var(--principal-color);
+    color: var(--white-color);
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: var(--pricipal-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.filters{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.filters button{
+    color: var(--dark-color);
+    border: none;
+    font-size: 1.4rem;
+    background-color: var(--white-color);
+    font-family: var(--pricipal-font);
+    font-weight: 500;
+    padding: 5px 0px;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.filters .active{
+    color: var(--principal-color);
+}
+
+.contain-projects{
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.contain-projects a{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contain-projects img{
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--dark-color);
+}
+
+footer .content{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-color);
+    font-family: var(--pricipal-font);
+    margin-top: 150px;
+}
+
+.particles{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+}
+
+@keyframes smootfh{
+    0%{
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.smooth{
+    animation: smootfh 1s forwards;
+}
+
+@media (max-width: 800px) {
+    main .responsive_container img{
+        width: 60%;
+        margin-top: 25px;
+    }
+    main .responsive_container .responsive_describe{
+        width: 90%;
+        font-size: 1.2rem;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        padding-bottom: 15px;
+    }
+    main .responsive_container .responsive_describe a img{
+        width: 25px;
+        margin: 0px;
+        align-self: center;
+    }
+
+    main .responsive_container .responsive_describe p{
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .contain-projects {
+        justify-content: center;
+    }
+
+    .filters button{
+        font-size: 1rem;
+    }
+
+}
